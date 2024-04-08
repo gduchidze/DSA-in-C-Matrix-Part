@@ -1,12 +1,14 @@
 #include <iostream>
 #include <climits>
 
+using namespace std;
+
 void AssignValues(int size, int arr[][4]) {
-    std::cout << "Enter Array Integers: " << std::endl;
-    
+    cout << "Enter Array Integers: " << endl;
+
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < 4; j++) {
-            std::cin >> arr[i][j];
+            cin >> arr[i][j];
         }
     }
 }
@@ -26,7 +28,7 @@ void SwapRowCol(int size, int arr[][4]) {
     }
 
     for (int j = 0; j < 4; j++) {
-        std::swap(arr[maxRow][j], arr[maxCol][j]);
+        swap(arr[maxRow][j], arr[maxCol][j]);
     }
 }
 
@@ -35,15 +37,14 @@ int main() {
     int a[x][y];
 
     AssignValues(x, a);
-
     SwapRowCol(x, a);
 
-    std::cout << "Modified Array:" << std::endl;
+    cout << "Modified Array:" << endl;
     for (int i = 0; i < x; i++) {
         for (int j = 0; j < y; j++) {
-            std::cout << a[i][j] << " ";
+            cout << a[i][j] << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     return 0;
